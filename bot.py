@@ -93,9 +93,21 @@ def handle(message):
         bot.send_message(message.chat.id, smart_ai("иш"))
 
     elif text == "❓ Савол бериш":
-        bot.send_message(message.chat.id, "❓ Саволингни ёз")
+        bot.send_message(message.chat.id, "эшитаман нима соволингиз бор , Фақат тепадагилар буйича совол қуйинг")
+    elif "эцп" in text.lower():
+        bot.send_message(message.chat.id, "📄 ЭЦП: pki.gov.kz орқали олинади")
+
+    elif "imei" in text.lower():
+        bot.send_message(message.chat.id, "🆔 IMEI: imei.rfs.gov.kz орқали текширилади")
+
+    elif "паспорт" in text.lower():
+        bot.send_message(message.chat.id, "🛂 Паспорт: eGov.kz орқали текширилади")
+
+    elif "корея" in text.lower() or "k-eta" in text.lower():
+        bot.send_message(message.chat.id, "✈️ K-ETA: Корея учун онлайн ариза")
 
     else:
-        bot.send_message(message.chat.id, smart_ai(text))
+        bot.send_message(message.chat.id, "🤖 Мен тушунмадим, бошқача ёзиб кўринг")
+    
 
 bot.polling()
